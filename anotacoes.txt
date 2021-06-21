@@ -1,0 +1,58 @@
+//================ CRIAÇÃO DE PROJETO NODE
+
+
+	-> CRIAR PASTA ONDE FICARÁ O PROJETO;
+	
+	-> git init;
+	
+	-> yarn init -y;
+	
+	-> abrir no VSCode e abrir um terminal;
+	
+	-> yarn add -D typescript;
+	
+		-> para adicionar o typescript como dependência de desenvolvimento, pois a aplicação será compilada posteriormente em javascript, utilizando o babel;
+		
+	-> yarn tsc --init
+	
+		-> inicializa o package tsconfig.json
+		
+		
+	-> yarn tsc - build da aplicação
+	
+		-> converte o código typescript para javascript, para poder executar com node
+		
+		-> ISSO PODE SER AUTOMATIZADO, PARA TESTE!!!!
+		
+		-> yarn add ts-node-dev -D
+		
+	-> yarn dev - para rodar o projeto
+	
+	-> yarn add tsconfig-paths -D
+	
+		-> para controle de paths
+		
+	-> yarn add eslint -D
+	
+		-> yarn eslint --init
+		
+	-> yarn add jest -D
+	
+		-> yarn jest --init
+		
+	-> NECESSÁRIO MUDANÇAS NAS CONFIGURAÇÕES:
+
+		-> jest.config.ts
+		
+			import { compilerOptions } from './tsconfig.json';
+			import { pathsToModuleNameMapper } from 'ts-jest/utils';
+		
+			moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>' }),
+		
+		-> tsconfig.json - adicionar fora do compilerOptions:
+		
+			"include": [
+				"src/**/*"
+			]
+		
+	-> yarn add -D @babel/cli @babel/core @babel/node @babel/preset-env @babel/preset-typescript babel-plugin-module-resolver
