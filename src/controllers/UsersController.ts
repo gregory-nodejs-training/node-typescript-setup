@@ -10,6 +10,6 @@ export class UsersController {
     async handle(request: Request, response: Response): Promise<Response> {
         const service = new CreateUserService();
         const user = await service.execute(jsonBody);
-        return response.json(user);
+        return response.status(200).json(user);
     }
 }
