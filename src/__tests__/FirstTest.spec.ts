@@ -6,4 +6,5 @@ test('it should be ok', () => {
     const user = new User(name, email);
 
     expect(user.name).toEqual(name);
+    expect(user.email).toEqual(email);
 });

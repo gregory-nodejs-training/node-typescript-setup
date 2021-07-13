@@ -9,6 +9,6 @@ router.get('/', (request, response) => {
     response.json({ message: 'Hello World' });
 });
 
-router.get('/users', userController.teste);
+router.get('/users', userController.handle);
 
 export { router };
