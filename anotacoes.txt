@@ -56,3 +56,5 @@
 			]
 		
 	-> yarn add -D @babel/cli @babel/core @babel/node @babel/preset-env @babel/preset-typescript babel-plugin-module-resolver
+
+	-> Criar arquivo babel.config.js

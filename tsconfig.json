@@ -26,7 +26,8 @@
       "@models/*": ["./src/models/*"],
       "@middlewares/*": ["./src/middlewares/*"],
       "@utils/*": ["./src/shared/utils/*"],
-      "@exceptions/*": ["./src/exceptions/*"]
+      "@exceptions/*": ["./src/exceptions/*"],
+      "@config/*": ["./src/config/*"]
     }
   },
   "include": [
